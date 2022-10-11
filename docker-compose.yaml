@@ -1,0 +1,12 @@
+
+version: '3'
+ 
+services:
+  ma_extension:
+    container_name: ma_extension
+    image: cloudblueconnect/connect-extension-runner:26.24
+    command: cextrun -d
+    volumes:
+      - .:/extension
+    env_file:
+      - .env
