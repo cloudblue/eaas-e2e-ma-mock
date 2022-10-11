@@ -9,17 +9,15 @@ This extension is used to run E2E tests for CloudBlue Connect Multiaccount Exten
 ## Frontend generation
 
 ```
-cd ui
-
 npm install
 
-cd node_modules/connect-ui-toolkit
+cd ui/node_modules/connect-ui-toolkit
 
 npm install
 
 npm run build
 
-cd ../..
+cd ../../..
 
 npm run build
 ```

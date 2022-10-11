@@ -8,7 +8,7 @@ const generateHtmlPlugin = (title) => {
   return new htmlWebpackPlugin({
     title,
     filename: `${moduleName}.html`,
-    template: `./index.html`,
+    template: `./ui/index.html`,
     chunks: [moduleName]
   });
 }
@@ -26,12 +26,12 @@ const pages = populateHtmlPlugins(["Index", "Settings"]);
 module.exports = {
   mode: 'production',
   entry: {
-      index : __dirname + "/src/index.js",
-      settings : __dirname + "/src/settings.js"
+      index : __dirname + "/ui/src/index.js",
+      settings : __dirname + "/ui/src/settings.js"
   },
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, '../e2e/static'),
+    path: path.resolve(__dirname, 'e2e/static'),
     clean: true,
   },
   optimization: {
