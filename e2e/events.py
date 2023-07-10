@@ -22,6 +22,7 @@ class E2EEventsApplication(EventsApplicationBase):
                 f'This extension has removed by {account}: '
                 f'id={request["id"]}, environment={request["environment"]["id"]}',
             )
+        return BackgroundResponse.done()
 
     @event('asset_purchase_request_processing', statuses=['pending'])
     def autoapprove_purchase_request(self, request):
